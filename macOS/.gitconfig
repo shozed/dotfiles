@@ -1,0 +1,10 @@
+[user]
+    signingkey = {link to key}
+    name = {name}
+    email = {git email}
+[commit]
+    gpgsign = true
+[gpg]
+    format = ssh
+[gpg "ssh"]
+    allowedSignersFile = ~/.gitallowedsigners
