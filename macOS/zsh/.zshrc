@@ -4,10 +4,18 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.cargo/env:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
-alias add='git add'
-alias commit='git commit -am'
-alias push='git push -u origin'
-alias status='git status'
+source "$HOME/.local/share/sopra/editor.zsh"
+
+alias ga='git add'
+alias gc='git commit -am'
+alias gp='git push -u origin'
+alias gs='git status'
+
+alias br='bun run'
+alias ba='bun add'
+alias bu='bun update'
+alias bi='bun install'
+alias brm='bun remove'
 
 alias els='eza -ghs type --icons'
 alias ll='eza -lghs type --icons'
