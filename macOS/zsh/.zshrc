@@ -1,10 +1,7 @@
-eval "$(starship init zsh)"
-
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.cargo/env:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-
-source "$HOME/.local/share/sopra/editor.zsh"
+export SSH_AUTH_SOCK=~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
 
 alias ga='git add'
 alias gc='git commit -am'
@@ -23,4 +20,15 @@ alias lla='eza -lghas type --icons'
 
 alias c='clear'
 
-export SSH_AUTH_SOCK=~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+
+
+eval "$(starship init zsh)"
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source <(fzf --zsh)
+
+source "/opt/homebrew/opt/fzf-tab/share/fzf-tab/fzf-tab.zsh"
+autoload -Uz compinit
+compinit
+zstyle ':fzf-tab:*' fzf-flags \
+  --color='pointer:#004FED'
